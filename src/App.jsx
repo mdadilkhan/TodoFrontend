@@ -9,6 +9,7 @@ import theme from './customTheme/Theme';
 
 const Login = lazy(() => import('./components/Login'));
 const SignUp = lazy(() => import('./components/SignUp'));
+const Home = lazy(()=>import('./components/Home'));
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<LinearProgress  />}>
           <Routes>
+            <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>} />
             <Route path='/signup' element={<SignUp/>} />
           </Routes>
