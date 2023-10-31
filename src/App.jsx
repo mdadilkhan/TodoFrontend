@@ -3,7 +3,7 @@
 
 // import React, {lazy,Suspense} from 'react'
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import { ThemeProvider,LinearProgress } from '@mui/material';
 import theme from './customTheme/Theme';
 
@@ -25,8 +25,9 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<LinearProgress  />}>
           <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/login' element={<Login/>} />
+            <Route path='/' element={<Login/>} />
+            <Route path='/home' element={<Home/>}/>
+            {/* <Route path='/login' element={<Login/>} /> */}
             <Route path='/signup' element={<SignUp/>} />
           </Routes>
         </Suspense>
