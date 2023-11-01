@@ -40,6 +40,7 @@ const Login = () => {
      console.log(signin);
   }
   console.log(signin);
+  
   const handleSubmit=(e)=>{
     e.preventDefault();
     axios.post('https://keepnotesclone.onrender.com/v1/login',signin).then((res)=>{
